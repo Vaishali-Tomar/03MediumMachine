@@ -1,0 +1,28 @@
+/* src/TrafficLight.css */
+.traffic-light {
+    width: 50px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .light {
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: gray;
+  }
+  
+  .light.red.active {
+    background-color: red;
+  }
+  
+  .light.yellow.active {
+    background-color: yellow;
+  }
+  
+  .light.green.active {
+    background-color: green;
+  }
+  

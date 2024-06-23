@@ -1,0 +1,28 @@
+/* src/EmailTemplate.css */
+.email-template {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  pre {
+    background-color: #312e2e;
+    padding: 15px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap; /* Preserve whitespace and wrapping */
+  }
+  

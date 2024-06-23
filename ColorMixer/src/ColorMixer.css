@@ -1,0 +1,68 @@
+/* src/ColorMixer.css */
+
+.color-mixer {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .color-inputs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .color-inputs div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttons {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f51b5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #303f9f;
+  }
+  
+  button:active {
+    background-color: #1c2a78;
+  }
+  
+  .mixed-color-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .color-box {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  

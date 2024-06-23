@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.todo-list {
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 8px;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+li input[type="text"] {
+  width: 70%;
+}

@@ -1,0 +1,54 @@
+/* src/TableComponent.css */
+.table-component {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: #5cdd25;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-component h1 {
+    margin-bottom: 20px;
+    color: #111111;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .control-group {
+    margin-bottom: 10px;
+  }
+  
+  .control-group label {
+    display: block;
+    font-weight: bold;
+    color: #181717;
+  }
+  
+  .radio-group {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .radio-group label {
+    margin: 0 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #0e0d0d;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  
