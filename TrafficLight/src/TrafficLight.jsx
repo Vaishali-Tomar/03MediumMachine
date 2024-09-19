@@ -5,23 +5,23 @@ import './TrafficLight.css';
 const TrafficLight = () => {
   const [light, setLight] = useState('red');
 
-  useEffect(() => {
-    let timer;
-    switch (light) {
-      case 'red':
-        timer = setTimeout(() => setLight('green'), 4000); // 4 seconds
-        break;
-      case 'green':
-        timer = setTimeout(() => setLight('yellow'), 3000); // 3 seconds
-        break;
-      case 'yellow':
-        timer = setTimeout(() => setLight('red'), 2000); // 2 seconds
-        break;
+ useEffect(() => {
+  let timer;
+  switch(light){
+    case "red":
+      timer = setTimeout(() =>setLight('green'), 4000);
+      break;
+      case "yellow":
+      timer = setTimeout(() =>setLight('red'), 3000);
+      break;
+      case "green":
+      timer = setTimeout(() =>setLight('yellow'), 2000);
+      break;
       default:
         break;
-    }
-    return () => clearTimeout(timer);
-  }, [light]);
+  }
+  return clearInterval(timer);
+ }, [light]);
 
   return (
     <div className="traffic-light">

@@ -5,32 +5,31 @@ const TodoList = () => {
   const [currentTodo, setCurrentTodo] = useState({ id: null, text: '' });
 
   const handleChange = (e) => {
-    setCurrentTodo({ ...currentTodo, text: e.target.value });
-  };
+    setCurrentTodo({...currentTodo, text: e.target.value})
+  }
 
   const handleSubmit = () => {
-    if (currentTodo.text.trim()) {
-      if (currentTodo.id) {
+     if(currentTodo.text.trim()){
+      if(currentTodo.id){
         setTodos(
-          todos.map((todo) =>
-            todo.id === currentTodo.id ? { ...todo, text: currentTodo.text } : todo
-          )
-        );
-      } else {
-        setTodos([...todos, { id: Date.now(), text: currentTodo.text }]);
+          todos.map((todo) => {
+            todo.id === currentTodo.id ? {...todo, text:currentTodo.text} : todo
+          })
+        )
+      }else{
+        setTodos([...todos, { id: Date.now(), text: currentTodo.text}])
       }
-      setCurrentTodo({ id: null, text: '' });
-    }
-  };
+      setCurrentTodo({id: null, text: ''})
+     }
+  }
 
-  const handleEdit = (todo) => {
+  const handleEdit = (todo) =>{
     setCurrentTodo(todo);
-  };
+  }
 
   const handleDelete = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
-
   return (
     <div className="todo-list">
       <h1>Todo List</h1>

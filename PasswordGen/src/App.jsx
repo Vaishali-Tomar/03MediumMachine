@@ -16,24 +16,24 @@ function App() {
     if (num) str += "0123456789";
     if (char) str += "!@#$%^&*()[]_+`~";
 
-    for (let i = 1; i <= length; i++) {
+     for(let i=1; i<=length; i++){
       let char = Math.floor(Math.random() * str.length + 1);
-      passw += str.charAt(char);
-    }
+      passw += str.charAt(char); 
+     }
+   setPass(passw);
 
-
-    setPass(passw);
   }, [length, num, char, setPass]);
 
   const copyPasswordToClip = useCallback(() => {
-    passwordRef.current?.select()
+    passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 100)
     window.navigator.clipboard.writeText(pass)
-  }, [pass])
-  useEffect(()=>{
-    passwordGen()
-  },[length, num, char, passwordGen])
+  }, [pass]);
 
+  useEffect(() => {
+    passwordGen();
+
+  }, [length, num, char, passwordGen])
   return (
     <>
       <div className="text-1.5xl w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-5 text-orange-300 bg-gray-600">

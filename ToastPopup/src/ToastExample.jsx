@@ -14,29 +14,28 @@ const ToastExample = () => {
     const toastOptions = {
       position: position,
       autoClose: duration,
-      hideProgressBar: false,
+      hideProccerBar: false,
       closeOnClick: true,
       pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    };
+      draggble: true,
+      progress:undefined,
+    }
+  }
 
-    switch (type) {
-      case 'success':
-        toast.success(message, toastOptions);
-        break;
-      case 'error':
-        toast.error(message, toastOptions);
-        break;
-      case 'info':
-        toast.info(message, toastOptions);
-        break;
+  switch (type){
+    case "sucess":
+      toast.success(message, toastOptions);
+      break;
+      case "error":
+      toast.error(message, toastOptions);
+      break;
+      case "info":
+      toast.info(message, toastOptions);
+      break;
       default:
         toast(message, toastOptions);
         break;
-    }
-  };
-
+  }
   return (
     <div className="toast-example">
       <h1>Toast Popup Example</h1>

@@ -5,36 +5,37 @@ const StopWatch = () => {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const timerRef = useRef(null);
+  
   const startTimer = () => {
-    if (!isRunning) {
+    if(!isRunning){
       setIsRunning(true);
       timerRef.current = setInterval(() => {
-        setTime((prevTime) => prevTime + 1);
+        setTime((pretime) => pretime + 1);
       }, 1000);
     }
-  };
+  }
+    const stopTimer = () => {
+      if(isRunning){
+        setIsRunning(false);
+        clearInterval(timerRef.current)
+      }
+    }
 
-  const stopTimer = () => {
-    if (isRunning) {
+    const resetTimer = () => {
       setIsRunning(false);
       clearInterval(timerRef.current);
+      setTime(0);
     }
-  };
 
-  const resetTimer = () => {
-    setIsRunning(false);
-    clearInterval(timerRef.current);
-    setTime(0);
-  };
-
-  const formatTime = (time) => {
-    const getSeconds = `0${time % 60}`.slice(-2);
-    const minutes = Math.floor(time / 60);
-    const getMinutes = `0${minutes % 60}`.slice(-2);
-    const getHours = `0${Math.floor(time / 3600)}`.slice(-2);
-
-    return `${getHours}:${getMinutes}:${getSeconds}`;
-  };
+    const formatTime = (time) => {
+      const getSeconds = `0${time % 60}`.slice(-2);
+      const minutes = Math.floor(time / 60);
+      const getMinutes = `0${minutes % 60}`.slice(-2);
+      const getHours = `0${Math.floor(time / 3600)}`.slice(-2);
+  
+      return `${getHours}:${getMinutes}:${getSeconds}`;
+    };
+  
   return (
     <div className="stopwatch">
       <h1>Stopwatch</h1>

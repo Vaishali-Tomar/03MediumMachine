@@ -7,17 +7,15 @@ const EmojiPicker = () => {
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value.toLowerCase());
-  };
+  }
 
-  const filteredEmojis = emojiList.filter(({ emoji, description }) =>
-    emoji.includes(search) || description.toLowerCase().includes(search)
-  );
+  const filteredEmojis = emojiList.filter(({emoji, description}) => 
+  emoji.includes(search) || description.toLowerCase().includes(search));
 
   const handleEmojiClick = (emoji) => {
     navigator.clipboard.writeText(emoji);
     alert(`Copied: ${emoji}`);
-  };
-
+  }
   return (
     <div className="emoji-picker">
       <h1>Emoji Picker</h1>

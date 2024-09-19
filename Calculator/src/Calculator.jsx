@@ -5,20 +5,20 @@ import './Calculator.css';
 
 const Calculator = () => {
   const [display, setDisplay] = useState('');
-
-  const handleButtonClick = (value) => {
-    if (value === '=') {
-      try {
-        setDisplay(eval(display)); // Note: Using eval is not recommended for production code
-      } catch (error) {
-        setDisplay('Error');
-      }
-    } else if (value === 'C') {
-      setDisplay('');
-    } else {
-      setDisplay(display + value);
+const handleButtonClick = () => {
+  if(value === ''){
+    try{
+      setDisplay(eval(display));
+    }catch(error){
+      setDisplay(error)
     }
-  };
+  }else if(value === 'C'){
+    setDisplay('');
+  }else{
+    setDisplay(display + value);
+  }
+}
+  
 
   const buttons = [
     '7', '8', '9', '/',
@@ -29,17 +29,16 @@ const Calculator = () => {
   ];
 
   return (
-    <div className="calculator">
-      <div className="display">{display}</div>
-      <div className="buttons">
-        {buttons.map((button, index) => (
-          <button
-            key={index}
-            onClick={() => handleButtonClick(button)}
-          >
-            {button}
-          </button>
-        ))}
+    <div>
+      <div>
+        {display}
+        <div>
+          {buttons.map((button, index) => (
+            <button key={index } onClick={() => handleButtonClick(button)}>
+              {button}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
